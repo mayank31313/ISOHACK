@@ -42,6 +42,7 @@ public class Login extends HttpServlet {
 		Person person = person_repo.checkPerson(phone, pass);
 		if(person != null){
 			session.setAttribute("ID",person.id);
+			request.setAttribute("status", "OK");
 			if(person.role.equals("farmer")){
 				request.getServletContext().getRequestDispatcher("/Farmer/index.jsp").forward(request, response);
 			}else if( person.role.equals("buyer")){
