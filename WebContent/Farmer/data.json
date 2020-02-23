@@ -1,0 +1,28 @@
+[
+    {
+     "url":"crops/maize.jpeg"
+    },
+    {
+        "url":"crops/tomato.jpeg"
+    },{
+        "url":"crops/onion.jpeg"
+       },
+       {
+        "url":"crops/jawar.jpg"
+       },
+       {
+        "url":"crops/arhar.jpg"
+       },
+       {
+        "url":"crops/drychilli.jpg"
+       },
+       {
+        "url":"crops/casterseed.jpg"
+       },
+       {
+        "url":"crops/dhan.jpeg"
+       },
+       {
+        "url":"crops/peanuts.jpg"
+       }      
+]
