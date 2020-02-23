@@ -32,12 +32,24 @@
                   <li><a href="Farmer/report.jsp">Reports</a></li>
                   <li><a href="Farmer/tutorial.jsp">Tutorial</a></li>                  
                   <li><a href="Farmer/contact.jsp">Contact</a></li>
-                  <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
-                  <!-- <ul class="dropdown">
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navDropDownLink" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navDropDownLink">
+                        <a class="dropdown-item" href="#">Edit Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+                  <!-- <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                  <ul class="dropdown">
                     <li><a href="farmerlogin.html">Farmer</a></li>
                     <li><a href="buyerlogin.html">Buyer</a></li>
-                  </ul> -->
-                </li>
+                  </ul>
+                </li> -->
                 </ul>
                 <!-- Search Icon -->
               </div>
