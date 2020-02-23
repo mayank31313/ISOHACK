@@ -22,48 +22,10 @@ if(status != null){
     <div class="spinner"></div>
   </div>
 
-  <header class="header-area">
-    
-    <div class="famie-main-menu">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <nav class="classy-navbar justify-content-between" id="famieNav">
-            <a href="index.html" class="nav-brand"><img src="img/core-img/agrilogo.png" alt=""></a>
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"><span></span><span></span><span></span></span>
-            </div>
-            <div class="classy-menu">
-              <div class="classycloseIcon">
-                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-              </div>
-              <div class="classynav">
-                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="sell.html">Sell Crop</a></li>
-                  <li><a href="report.html">Reports</a></li>
-                  <li><a href="tutorial.html">Tutorial</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navDropDownLink" 
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profile
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navDropDownLink">
-                        <a class="dropdown-item" href="#">Edit Profile</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
-                </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+
+    <!-- ##### Header Area Start ##### -->
+  <%@ include file = "header.jsp" %>
+  <!-- ##### Header Area End ##### -->
   <section class="famie-benefits-area section-padding-100-0 pb-5">
     <div class="container">
       <div class="row">

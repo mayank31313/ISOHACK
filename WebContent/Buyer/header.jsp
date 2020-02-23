@@ -29,7 +29,7 @@
               <div class="classynav">
                 <ul>
                   <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="sell.jsp">Buy Crop</a></li>
+                  <li><a href="buy.jsp">Buy Crop</a></li>
                   <!-- <li><a href="#">Services</a>
                     <ul class="dropdown">
                       <li><a href="farmerlogin.html">Sell Crop</a></li>
