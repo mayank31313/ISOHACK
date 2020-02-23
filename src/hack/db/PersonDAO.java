@@ -11,13 +11,7 @@ import hack.fields.Person;
 public class PersonDAO {
 	Connection conn;
 	public PersonDAO() throws SQLException{
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/agripro","root","abcd");
+		conn = DataBase.getConnection();
 	}
 	
 	public Person checkPerson(String phone,String pass){
