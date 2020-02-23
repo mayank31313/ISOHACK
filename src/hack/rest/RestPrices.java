@@ -16,7 +16,7 @@ import com.google.gson.GsonBuilder;
 import hack.db.PricesDAO;
 import hack.fields.Prices;
 
-@WebServlet("/restprices")
+@WebServlet("/Farmer/restprices")
 public class RestPrices extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     Gson gson = new GsonBuilder().setPrettyPrinting().create();

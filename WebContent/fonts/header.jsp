@@ -1,4 +1,4 @@
- <header class="header-area">
+  <header class="header-area">
     
     <!-- Navbar Area -->
     <div class="famie-main-menu">
@@ -7,7 +7,9 @@
           <!-- Menu -->
           <nav class="classy-navbar justify-content-between" id="famieNav">
             <!-- Nav Brand -->
-            <a href="index.jsp" class="nav-brand"><img src="img/core-img/agrilogo.png" alt=""></a>
+            <a href="index.jsp" class="nav-brand">
+                <img src="img/core-img/agrilogo.png" alt="">
+            </a>
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
               <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -22,7 +24,7 @@
               <div class="classynav">
                 <ul>
                   <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="sell.jsp">Sell Crop</a></li>
+                  <li><a href="buy.jsp">Buy Crops</a></li>
                   <!-- <li><a href="#">Services</a>
                     <ul class="dropdown">
                       <li><a href="farmerlogin.html">Sell Crop</a></li>
@@ -30,7 +32,7 @@
                     </ul>
                   </li> -->
                   <li><a href="report.jsp">Reports</a></li>
-                  <li><a href="tutorial.jsp">Tutorial</a></li>                  
+                  <li><a href="tutorial.jsp">Tutorial</a></li>
                   <li><a href="contact.jsp">Contact</a></li>
                   <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
                   <!-- <ul class="dropdown">
@@ -48,4 +50,3 @@
       </div>
     </div>
   </header>
- 
