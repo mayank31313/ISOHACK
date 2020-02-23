@@ -6,27 +6,19 @@
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <!-- Title -->
   <title>AGRIPRO | Contact</title>
-  <!-- Favicon -->
   <link rel="icon" href="img/core-img/favicon.ico">
-  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <!-- Preloader -->
   <div class="preloader d-flex align-items-center justify-content-center">
     <div class="spinner"></div>
   </div>
 
-  <!-- ##### Header Area Start ##### -->
   <%@ include file = "header.jsp" %>
-  <!-- ##### Header Area End ##### -->
-
-  <!-- ##### Breadcrumb Area Start ##### -->
+ 
   <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -48,14 +40,10 @@
       </nav>
     </div>
   </div>
-  <!-- ##### Breadcrumb Area End ##### -->
-
-  <!-- ##### Contact Information Area Start ##### -->
   <section class="contact-info-area">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <!-- Section Heading -->
           <div class="section-heading text-center">
             <p>CONTACT INFO</p>
             <h2><span>Ways</span> To Contact Us </h2>
@@ -66,7 +54,6 @@
 
       <div class="row">
 
-        <!-- Single Information Area -->
         <div class="col-12 col-md-4">
           <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="100ms">
             <div class="contact-icon">
@@ -77,7 +64,6 @@
           </div>
         </div>
 
-        <!-- Single Information Area -->
         <div class="col-12 col-md-4">
           <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
             <div class="contact-icon">
@@ -88,7 +74,6 @@
           </div>
         </div>
 
-        <!-- Single Information Area -->
         <div class="col-12 col-md-4">
           <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="1000ms">
             <div class="contact-icon">
@@ -103,23 +88,17 @@
       <div class="c-border"></div>
     </div>
   </section>
-  <!-- ##### Contact Information Area End ##### -->
-
-  <!-- ##### Contact Area Start ##### -->
   <section class="contact-area section-padding-100-0">
     <div class="container">
       <div class="row justify-content-between">
 
-        <!-- Contact Content -->
         <div class="col-12 col-lg-5">
           <div class="contact-content mb-100">
-            <!-- Section Heading -->
             <div class="section-heading">
               <p>Contact now</p>
               <h2><span>Get In Touch</span> With Us</h2>
               <img src="img/core-img/decor.png" alt="">
             </div>
-            <!-- Contact Form Area -->
             <div class="contact-form-area">
               <form action="#" method="post">
                 <div class="row">
@@ -144,7 +123,6 @@
           </div>
         </div>
 
-        <!-- Contact Maps -->
         <div class="col-lg-6">
           <div class="contact-maps mb-100">
             <iframe src="chat.html"></iframe>
@@ -153,19 +131,13 @@
       </div>
     </div>
   </section>
-  <!-- ##### Contact Area End ##### -->
-
-  <!-- ##### Footer Area Start ##### -->
   <footer class="footer-area">
-    <!-- Main Footer Area -->
     <div class="main-footer bg-img bg-overlay section-padding-80-0" style="background-image: url(img/bg-img/3.jpg);">
       <div class="container">
         <div class="row">
 
-          <!-- Single Footer Widget Area -->
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="footer-widget mb-80">
-              <!-- <a href="#" class="foo-logo d-block mb-30"><img src="img/core-img/AGRIPRO.png" alt=""></a> -->
               <h2 style= "color:white">AGRIPRO</h2><br/>
               <p>A Smart platform for Farmers</p>
               <div class="contact-info">
@@ -176,11 +148,9 @@
             </div>
           </div>
 
-          <!-- Single Footer Widget Area -->
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="footer-widget mb-80">
               <h5 class="widget-title">QUICK LINK</h5>
-              <!-- Footer Widget Nav -->
               <nav class="footer-widget-nav">
                 <ul>
                   <li><a href="#">Reports</a></li>
@@ -192,11 +162,9 @@
             </div>
           </div>
 
-          <!-- Single Footer Widget Area -->
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="footer-widget mb-80">
               <h5 class="widget-title">STAY CONNECTED</h5>
-              <!-- Footer Social Info -->
               <div class="footer-social-info">
                 <a href="#">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -219,32 +187,17 @@
     </div>
 
   </footer>
-  <!-- ##### Footer Area End ##### -->
-
-  <!-- ##### All Javascript Files ##### -->
-  <!-- jquery 2.2.4  -->
   <script src="js/jquery.min.js"></script>
-  <!-- Popper js -->
   <script src="js/popper.min.js"></script>
-  <!-- Bootstrap js -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- Owl Carousel js -->
   <script src="js/owl.carousel.min.js"></script>
-  <!-- Classynav -->
   <script src="js/classynav.js"></script>
-  <!-- Wow js -->
   <script src="js/wow.min.js"></script>
-  <!-- Sticky js -->
   <script src="js/jquery.sticky.js"></script>
-  <!-- Magnific Popup js -->
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- Scrollup js -->
   <script src="js/jquery.scrollup.min.js"></script>
-  <!-- Jarallax js -->
   <script src="js/jarallax.min.js"></script>
-  <!-- Jarallax Video js -->
   <script src="js/jarallax-video.min.js"></script>
-  <!-- Active js -->
   <script src="js/active.js"></script>
 </body>
 

@@ -1,7 +1,4 @@
-/* ***** Master Stylesheet ***** */
-/* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
-/* :: 2.0 Import All CSS Plugins */
 @import url(css/bootstrap.min.css);
 @import url(css/classy-nav.css);
 @import url(css/font-awesome.min.css);
@@ -110,7 +107,6 @@ input:focus {
 .jarallax > .jarallax-img {
   position: absolute;
   object-fit: cover;
-  /* support for plugin https://github.com/bfred-it/object-fit-images */
   font-family: 'object-fit: cover;';
   top: 0;
   left: 0;
