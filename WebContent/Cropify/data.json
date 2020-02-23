@@ -1,16 +1,38 @@
 [
     {
-     "url":"images/card1.png"
+     "url":"crops/maize.jpeg",
+     "cropname":"Maize"
     },
     {
-        "url":"images/card2.png"
+        "url":"crops/tomato.jpeg",
+        "cropname":"Tomato"
     },{
-        "url":"images/card3.png"
+        "url":"crops/onion.jpeg",
+        "cropname":"Onion"
        },
        {
-        "url":"images/card4.png"
+        "url":"crops/jawar.jpg",
+        "cropname":"Jawar"
        },
        {
-        "url":"images/card5.png"
+        "url":"crops/arhar.jpg",
+        "cropname":"Arhar"
+       },
+       {
+        "url":"crops/drychilli.jpg",
+        "cropname":"Drychilli"
+       },
+       {
+        "url":"crops/bengalgrams.jpg",
+        "cropname":"Bengalgrams"
+       },
+       {
+        "url":"crops/casterseed.jpg"
+       },
+       {
+        "url":"crops/dhan.jpeg"
+       },
+       {
+        "url":"crops/peanuts.jpg"
        }      
 ]
