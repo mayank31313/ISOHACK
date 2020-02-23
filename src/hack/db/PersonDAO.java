@@ -29,8 +29,9 @@ public class PersonDAO {
 		}
 	}
 	
-	public boolean updateFarmer(Person farmer){
+	public boolean updatePerson(Person farmer){
 		Person f = checkPerson(farmer.phone, farmer.password);
+		System.out.println(f);
 		if(f == null){
 			try {
 				PreparedStatement ps = conn.prepareStatement("INSERT INTO person(name,password,number,state,district,role) VALUES(?,?,?,?,?,?)");
@@ -40,7 +41,7 @@ public class PersonDAO {
 				ps.setString(4, farmer.state);
 				ps.setString(5, farmer.district);
 				ps.setString(6, farmer.role);
-				return ps.execute();
+				return (ps.executeUpdate() > 0);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -55,7 +56,7 @@ public class PersonDAO {
 				ps.setString(3, farmer.state);
 				ps.setString(4, farmer.district);
 				ps.setLong(5, f.id);
-				return ps.execute();
+				return (ps.executeUpdate() > 0);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -74,12 +75,13 @@ public class PersonDAO {
 			f.state = rs.getString("state");
 			f.district = rs.getString("district");
 			f.role = rs.getString("role");
+			rs.close();
 			return f;
 		}
 		return null;
 	}
 	
-	public Person getFramer(Long id){		
+	public Person getPerson(Long id){		
 		try{
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM person WHERE id=?");
 			ps.setLong(1, id);

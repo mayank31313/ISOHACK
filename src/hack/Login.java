@@ -37,18 +37,20 @@ public class Login extends HttpServlet {
 		String pass = request.getParameter("password");
 
 		HttpSession session = request.getSession();
+		System.out.println(phone);
+		System.out.println(pass);
 		Person person = person_repo.checkPerson(phone, pass);
 		if(person != null){
 			session.setAttribute("ID",person.id);
 			if(person.role.equals("farmer")){
-				request.getServletContext().getRequestDispatcher("farmer/index.jsp").forward(request, response);
+				request.getServletContext().getRequestDispatcher("/Farmer/index.jsp").forward(request, response);
 			}else if( person.role.equals("buyer")){
-				request.getServletContext().getRequestDispatcher("buyer/index.jsp").forward(request, response);
+				request.getServletContext().getRequestDispatcher("/Buyer/index.jsp").forward(request, response);
 			}
 		}
 		else{
 			request.setAttribute("msg", "Username or Password Incorrect");
-			request.getServletContext().getRequestDispatcher("login.jsp").forward(request, response);
+			request.getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
 		}
 	}
 }
