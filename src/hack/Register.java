@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 
 import hack.db.PersonDAO;
@@ -39,17 +38,23 @@ public class Register extends HttpServlet {
     	Person p = new Person();
 		p.phone = request.getParameter("phone");
 		p.password = request.getParameter("password");
-		p.role = request.getParameter("role");
+		p.role = request.getParameter("type");
 		p.district = request.getParameter("district");
 		p.state = request.getParameter("state");
 		p.name = request.getParameter("name");
-		
-		if(person_repo.updateFarmer(p)){
+		boolean b = person_repo.updatePerson(p);
+		System.out.println(b);
+		if(b){
 			request.setAttribute("msg", "User registered successfully");
-			request.getServletContext().getRequestDispatcher("login.jsp").forward(request, response);
+			request.getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+			System.out.println("Registered Successfully");
 		}else{
 			request.setAttribute("msg", "Internal Server Error");
-			request.getServletContext().getRequestDispatcher("register.jsp").forward(request, response);
+			System.out.println("Could not register");
+			if(p.role.equals("farmer"))
+				request.getServletContext().getRequestDispatcher("/fsignup.jsp").forward(request, response);
+			else
+				request.getServletContext().getRequestDispatcher("/bsignup.jsp").forward(request, response);
 		}
 	}
 

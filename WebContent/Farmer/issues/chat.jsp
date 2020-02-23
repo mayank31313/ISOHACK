@@ -29,7 +29,7 @@
 
 <script>
 $(document).ready(function(){
-	const socket = io('http://localhost:5005')
+	const socket = io(':9092/');
 	console.log("Socket successfully initialised")
 
     var user = {};
