@@ -1,0 +1,44 @@
+.a {
+    position: relative;
+    margin-left:10px;
+    margin-top:10px;
+  }
+
+.b {
+  opacity: 1;
+  display: block;
+  width: 10%;
+  height: 10%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.c {
+	background-color: transparent;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.a:hover .b {
+  opacity: 1;
+  filter: brightness(30%)
+}
+
+.a:hover .c {
+  opacity: 1;
+}
+
+.d {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
