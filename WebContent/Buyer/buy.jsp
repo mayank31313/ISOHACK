@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <!-- Title -->
-  <title>AGRIPRO | Report</title>
+  <title>AGRIPRO | Home</title>
   <!-- Favicon -->
   <link rel="icon" href="img/core-img/favicon.ico">
   <!-- Core Stylesheet -->
@@ -23,64 +23,17 @@
   </div>
 
   <!-- ##### Header Area Start ##### -->
-  <header class="header-area">
-    
-    <!-- Navbar Area -->
-    <div class="famie-main-menu">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Menu -->
-          <nav class="classy-navbar justify-content-between" id="famieNav">
-            <!-- Nav Brand -->
-            <a href="index.html" class="nav-brand"><img src="img/core-img/agrilogo.png" alt=""></a>
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"><span></span><span></span><span></span></span>
-            </div>
-            <!-- Menu -->
-            <div class="classy-menu">
-              <!-- Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-              </div>
-              <!-- Navbar Start -->
-              <div class="classynav">
-                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="buy.html">Buy Crops</a></li>
-                  <!-- <li><a href="#">Services</a>
-                    <ul class="dropdown">
-                      <li><a href="farmerlogin.html">Sell Crop</a></li>
-                      <li><a href="buyerlogin.html">Buy Crop</a></li>
-                    </ul>
-                  </li> -->
-                  <li><a href="#">Reports</a></li>
-                  <li><a href="tutorial.html">Tutorial</a></li>                  
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="farmerlogin.html">Farmer</a></li>
-                    <li><a href="buyerlogin.html">Buyer</a></li>
-                  </ul> -->
-                </li>
-                </ul>
-                <!-- Search Icon -->
-              </div>
-              <!-- Navbar End -->
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ##### Header Area End ##### -->
+
+  <%@ include file="header.jsp" %>
+
+<!-- ##### Header Area End ##### -->
   <!-- ##### Breadcrumb Area Start ##### -->
   <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
           <div class="breadcrumb-text">
-            <h2> Reports<h2>
+            <h2> Buy Crops<h2>
           </div>
         </div>
       </div>
@@ -91,7 +44,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Reports</li>
+          <li class="breadcrumb-item active" aria-current="page">Crops</li>
         </ol>
       </nav>
     </div>

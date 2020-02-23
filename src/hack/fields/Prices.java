@@ -8,4 +8,5 @@ public class Prices {
 	public int modal_price;
 	public String variety;
 	public String district;
+	public String path;
 }

@@ -17,7 +17,7 @@ public class PricesDAO {
 	
 	public List<Prices> getData(String district){
 		try {
-			PreparedStatement ps = conn.prepareStatement("SELECT * FROM prices WHERE district=?");
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM prices WHERE district=? and path!='NULL'");
 			ps.setString(1, district);
 			
 			List<Prices> prices = new ArrayList();
@@ -31,6 +31,7 @@ public class PricesDAO {
 				p.modal_price = rs.getInt("modal_price");
 				p.variety = rs.getString("variety");
 				p.district = rs.getString("district");
+				p.path = rs.getString("path");
 				prices.add(p);
 			}
 			return prices;

@@ -147,7 +147,7 @@
         <!-- Contact Maps -->
         <div class="col-lg-6">
           <div class="contact-maps mb-100">
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.021899464054!2d75.93397521491168!3d22.61565738516065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962e4fd236ad5c7%3A0x1cf9b2b7102464ca!2sAcropolis%20Technical%20Campus%20-%20ATC!5e0!3m2!1sen!2sin!4v1582398559798!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+            <iframe src="chat.html"></iframe>
           </div>
         </div>
       </div>
