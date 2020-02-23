@@ -27,27 +27,38 @@
 <script>
   $(document).ready(function(){
     console.log("LOADED")
-    $.get('http://localhost:8000/data.json',  // url
+    $.get('restprices?district=Kurnool',  // url
       function (data, textStatus, jqXHR) {  // success callback
         console.log(data)
           for (i=0;i<data.length;i++){
             var d = data[i];
             console.log(d.url)
-            load(d.url)
+            load(d)
           }
     });
   });
-  function load(url){
+  function load(data){
     var div = document.createElement("DIV");    
     var img = document.createElement("IMG");
-    img.src = url;
+    img.src = data.path;
     img.className = "b"
+<<<<<<< HEAD:WebContent/Farmer/report.html
     img.style = "width:100%; height: 100%; border: 2px orange solid"
+=======
+    img.style = "width:100%; height: 100%;"
+    
+>>>>>>> 7359feab97a19c8d6f65b4db7c08f49f8814e5be:WebContent/Farmer/report.jsp
     var middle_div = document.createElement("DIV");
     middle_div.className = "c";
+    
+    var price_div = document.createElement("DIV");
+    price_div.style = "color: white";
+    price_div.innerHTML = "Market Price: " + data.modal_price;
+    middle_div.appendChild(price_div);
+    
     var text_div = document.createElement("DIV");
     text_div.className = "d";
-    text_div.innerHTML = "John Doe"
+    text_div.innerHTML = data.commodity;
     middle_div.appendChild(text_div)
     div.appendChild(img);
     div.appendChild(middle_div);
@@ -65,56 +76,7 @@
   </div>
 
   <!-- ##### Header Area Start ##### -->
-  <header class="header-area">
-    
-    <!-- Navbar Area -->
-    <div class="famie-main-menu">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Menu -->
-          <nav class="classy-navbar justify-content-between" id="famieNav">
-            <!-- Nav Brand -->
-            <a href="fhome.html" class="nav-brand"><img src="img/core-img/agrilogo.png" alt=""></a>
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"><span></span><span></span><span></span></span>
-            </div>
-            <!-- Menu -->
-            <div class="classy-menu">
-              <!-- Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-              </div>
-              <!-- Navbar Start -->
-              <div class="classynav">
-                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="sell.html">Sell Crop</a></li>
-                  <!-- <li><a href="#">Services</a>
-                    <ul class="dropdown">
-                      <li><a href="farmerlogin.html">Sell Crop</a></li>
-                      <li><a href="buyerlogin.html">Buy Crop</a></li>
-                    </ul>
-                  </li> -->
-                  <li><a href="#">Reports</a></li>
-                  <li><a href="tutorial.html">Tutorial</a></li>                  
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="farmerlogin.html">Farmer</a></li>
-                    <li><a href="buyerlogin.html">Buyer</a></li>
-                  </ul> -->
-                </li>
-                </ul>
-                <!-- Search Icon -->
-              </div>
-              <!-- Navbar End -->
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+<%@ include file="header.jsp" %>
   <!-- ##### Header Area End ##### -->
   <!-- ##### Breadcrumb Area Start ##### -->
   <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
