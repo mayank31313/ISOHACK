@@ -6,8 +6,6 @@
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <!-- Title -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AGRIPRO | Report</title>
 
@@ -16,10 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style1.css">
-  
-  <!-- Favicon -->
   <link rel="icon" href="img/core-img/favicon.ico">
-  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -42,12 +37,8 @@
     var img = document.createElement("IMG");
     img.src = data.path;
     img.className = "b"
-<<<<<<< HEAD:WebContent/Farmer/report.html
+
     img.style = "width:100%; height: 100%; border: 2px orange solid"
-=======
-    img.style = "width:100%; height: 100%;"
-    
->>>>>>> 7359feab97a19c8d6f65b4db7c08f49f8814e5be:WebContent/Farmer/report.jsp
     var middle_div = document.createElement("DIV");
     middle_div.className = "c";
     
@@ -70,15 +61,11 @@
 </script>
 
 <body>
-  <!-- Preloader -->
   <div class="preloader d-flex align-items-center justify-content-center">
     <div class="spinner"></div>
   </div>
 
-  <!-- ##### Header Area Start ##### -->
-<%@ include file="header.jsp" %>
-  <!-- ##### Header Area End ##### -->
-  <!-- ##### Breadcrumb Area Start ##### -->
+ <%@ include file="header.jsp" %>
   <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -100,36 +87,21 @@
       </nav>
     </div>
   </div>
-
-  <!-- ##### Famie Benefits Area Start ##### -->
-    <div class="container-fluid" >
+   <div class="container-fluid" >
       <div class="row" id="test1" style="margin-left: 250px;"></div>
     </div>
 
-  <!-- ##### All Javascript Files ##### -->
-  <!-- jquery 2.2.4  -->
   <script src="js/jquery.min.js"></script>
-  <!-- Popper js -->
   <script src="js/popper.min.js"></script>
-  <!-- Bootstrap js -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- Owl Carousel js -->
   <script src="js/owl.carousel.min.js"></script>
-  <!-- Classynav -->
   <script src="js/classynav.js"></script>
-  <!-- Wow js -->
   <script src="js/wow.min.js"></script>
-  <!-- Sticky js -->
   <script src="js/jquery.sticky.js"></script>
-  <!-- Magnific Popup js -->
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- Scrollup js -->
   <script src="js/jquery.scrollup.min.js"></script>
-  <!-- Jarallax js -->
   <script src="js/jarallax.min.js"></script>
-  <!-- Jarallax Video js -->
   <script src="js/jarallax-video.min.js"></script>
-  <!-- Active js -->
   <script src="js/active.js"></script>
 </body>
 
