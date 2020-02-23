@@ -37,24 +37,29 @@
     var img = document.createElement("IMG");
     img.src = data.path;
     img.className = "b"
-
     img.style = "width:100%; height: 100%; border: 2px orange solid"
+    
     var middle_div = document.createElement("DIV");
     middle_div.className = "c";
     
     var price_div = document.createElement("DIV");
-    price_div.style = "color: white";
-    price_div.innerHTML = "Market Price: " + data.modal_price;
+    price_div.style = "color: white; font-size: 30px;";
+    price_div.innerHTML = data.commodity;
+    middle_div.appendChild(price_div);
+    
+    price_div = document.createElement("DIV");
+    price_div.style = "color: white; font-size: 15px;";
+    price_div.innerHTML = "Variety: " + data.variety;
     middle_div.appendChild(price_div);
     
     var text_div = document.createElement("DIV");
     text_div.className = "d";
-    text_div.innerHTML = data.commodity;
+    text_div.innerHTML = data.modal_price;
+    
     middle_div.appendChild(text_div)
     div.appendChild(img);
     div.appendChild(middle_div);
     div.className = "a col-md-3";
-
     var row_div = document.getElementById("test1")
     row_div.appendChild(div);
   }

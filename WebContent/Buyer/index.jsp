@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%
+String status = (String)request.getAttribute("status");
+if(status != null){
+	out.println("<script>window.location = 'Buyer/index.jsp'</script>");
+}
+%>
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="">

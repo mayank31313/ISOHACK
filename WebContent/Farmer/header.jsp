@@ -1,5 +1,11 @@
- <header class="header-area">
-    
+ <%
+	Object obj = session.getAttribute("ID");
+ 	if(obj == null){
+ 		out.println("<script>window.location = '/ISO-HACK/logout'</script>");
+ 	}
+ %>
+ 
+ <header class="header-area"> 
     <div class="famie-main-menu">
       <div class="classy-nav-container breakpoint-off">
         <div class="container">
@@ -14,11 +20,12 @@
               </div>
               <div class="classynav">
                 <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li class="active"><a href="index.jsp">Home</a></li>
                   <li><a href="sell.jsp">Sell Crop</a></li>
-                  <li><a href="Farmer/report.jsp">Reports</a></li>
-                  <li><a href="Farmer/tutorial.jsp">Tutorial</a></li>                  
-                  <li><a href="Farmer/contact.jsp">Contact</a></li>
+
+                  <li><a href="report.jsp">Reports</a></li>
+                  <li><a href="tutorial.jsp">Tutorial</a></li>                  
+                  <li><a href="contact.jsp">Contact</a></li>
                   <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navDropDownLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,7 +35,7 @@
                     <div class="dropdown-menu" aria-labelledby="navDropDownLink">
                         <a class="dropdown-item" href="#">Edit Profile</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="/ISO-HACK/logout">Logout</a>
                     </div>
                 </li>
                 </ul>
