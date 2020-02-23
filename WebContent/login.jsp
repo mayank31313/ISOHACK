@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="assets/css/Login-Box-En.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
+<%
+String msg = (String)request.getAttribute("msg");
+if(msg != null){
+	out.println("<script>alert('"+msg+"')</script>");
+}
+%>
 <body style="height: 700px;margin: 120px;">
-<form action="Login" method="POST">
+<form action="login" method="POST">
     <div class="d-flex flex-column justify-content-center" id="login-box" style="opacity: 1;filter: brightness(91%) grayscale(0%) hue-rotate(5deg) invert(0%) saturate(129%);">
         <div class="login-box-header">
             <h6 style="color: #000000;margin-bottom: 0px;font-weight: 400;font-size: 27px;"><strong>LOGIN</strong></h6>
@@ -43,8 +48,8 @@
         </div>
         <div id="login-box-footer" style="padding:10px 20px;padding-bottom:23px;padding-top:18px;">
             <p style="margin-bottom:0px;">Don't you have an account?</p>
-            <p style="margin-bottom:0px;">Register as a farmer<a id="register-link" href="fsignup.html">Sign Up!</a></p>
-            <p style="margin-bottom:0px;">Register as a Buyer<a id="register-link" href="bsignup.html">Sign Up!</a></p>
+            <p style="margin-bottom:0px;">Register as a farmer<a id="register-link" href="fsignup.jsp">Sign Up!</a></p>
+            <p style="margin-bottom:0px;">Register as a Buyer<a id="register-link" href="bsignup.jsp">Sign Up!</a></p>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
