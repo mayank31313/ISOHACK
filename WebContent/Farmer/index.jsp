@@ -57,7 +57,18 @@
                   <li><a href="report.html">Reports</a></li>
                   <li><a href="tutorial.html">Tutorial</a></li>
                   <li><a href="contact.html">Contact</a></li>
-                  <li><a href="#">Profile&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navDropDownLink" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navDropDownLink">
+                        <a class="dropdown-item" href="#">Edit Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
                   <!-- <ul class="dropdown">
                     <li><a href="farmerlogin.html">Farmer</a></li>
                     <li><a href="buyerlogin.html">Buyer</a></li>
