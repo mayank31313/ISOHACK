@@ -10,31 +10,8 @@
   <link rel="icon" href="img/core-img/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
   <script type="text/javascript">
-  $(document).ready(function(){
-	    console.log("LOADED")
-	    $.get('restprices?district=Kurnool',  // url
-	      function (data, textStatus, jqXHR) {  // success callback
-	        console.log(data)
-	          for (i=0;i<data.length;i++){
-	            var d = data[i];
-	            console.log(d.url)
-	            $("#tabId").append("<tr><td>" + d.commodity + "</td><td>"+ d.min_price +"</td><td><button class='btn btn-success'>Sell</button></td></tr>")
-	          }
-	    });
-	  });
   </script>
-  <style>
-  td{
-  padding-top:8px;
-  }
-  .btn-success{
-  width:100px;
-  }
-  
-  </style>
   
 </head>
 
@@ -66,16 +43,7 @@
       </nav>
     </div>
   </div>
-	
-	<div class="container-fluid">
-		<div class="row text-center">
-			<div class="col-12">
-				<table id="tabId" cellspacing="10" cellpadding="20" style="width: 100%; border: 1px solid black">
-				</table>
-			</div>
-		</div>
-	</div>
-	<!-- 
+
   <div class="container">
     <div class="card card-default" id="card_contacts">
         <div id="contacts" class="panel-collapse collapse show" aria-expanded="true">
@@ -165,7 +133,6 @@
             </ul>
         </div>
     </div>
-     -->
 </div>
 
   <script src="js/jquery.min.js"></script>
