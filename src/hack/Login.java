@@ -43,6 +43,7 @@ public class Login extends HttpServlet {
 		if(person != null){
 			session.setAttribute("ID",person.id);
 			request.setAttribute("status", "OK");
+			session.setAttribute("name", person.name);
 			if(person.role.equals("farmer")){
 				request.getServletContext().getRequestDispatcher("/Farmer/index.jsp").forward(request, response);
 			}else if( person.role.equals("buyer")){

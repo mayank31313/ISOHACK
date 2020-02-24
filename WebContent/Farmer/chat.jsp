@@ -1,3 +1,7 @@
+<%
+String name = (String)session.getAttribute("name");
+%>
+
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -29,13 +33,13 @@
 
 <script>
 $(document).ready(function(){
-	const socket = io('http://localhost:5005')
+	const socket = io(':9092')
 	console.log("Socket successfully initialised")
-
+	
     var user = {};
     user.avatar = "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png";
     var bot = {};
-    bot.avatar = "https://cdn-images-1.medium.com/max/1600/1*OiKXrkvrsUqA105iY9iAwg.png";
+    bot.avatar = "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png";
 
     function formatAMPM(date) {
         var hours = date.getHours();
@@ -48,7 +52,7 @@ $(document).ready(function(){
         return strTime;
     }     
    
-    function insertChat(who, text,data){
+    function insertChat(who,data){
         var control = "";
         var date = formatAMPM(new Date());
         
@@ -56,15 +60,15 @@ $(document).ready(function(){
             control = '<li style="width:100%;">' +
                             '<div class="msj-rta macro">' +
                                 '<div class="text text-r">' +
-                                    '<p class="message">'+text+'</p>' +
+                                    '<p class="message">'+data.msg+'</p>' +
                                     '<p><small>'+date+'</small></p>' +
                                 '</div>' +
                             '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width: 50px;" src="'+user.avatar+'" /></div>' +                                
                     '</li>';
-            message = {"message":data.text,session_id:socket.id}
-            socket.emit('user_uttered', message); 
+            message = {"msg":data.msg,name:"<%=name%>"}
+            socket.emit('msg', message); 
         }
-        else if(who == "bot"){
+        else if(who == "other"){
             li = $(document.createElement("LI")).css({
                 "width":"100%" 
             })        
@@ -72,80 +76,16 @@ $(document).ready(function(){
                 "max-width":"80%"
             }).addClass('msj macro')
             div1.append('<div class="avatar"> '+
+            				"<p style='font-size: 10px; '>"+data.name+"</p><br><br>"+
                             '<img class="img-circle" style="width: 50px;" src="'+ bot.avatar +'" />'+
                         '</div>')
 
             div2 = $(document.createElement("div")).addClass('text text-l')
-            try{
-                json = JSON.parse(text)
-                console.log("JSON")
-                console.log(json)
-                div3 = $(document.createElement("DIV"))
-                div3.append("<h4>" + json.name + "</h4>")
-                div3.append("<span>Distance: " + json.distance + "</span><br>")
-                div3.append("Ratings: " + json.ratings + "<br>")
-                div2.append(div3)
-            }
-            catch(err){
-                div2.append('<p class="message">'+ text +'</p>')
-            }
+            
+            div2.append('<p class="message">'+ data.msg +'</p>')
+            
 
             div1.append(div2)
-            if(data && data["quick_replies"]){
-                data_type = data["quick_replies"][0].payload
-
-                if(data_type == "combobox"){
-                    select = $(document.createElement("select")).css({
-                        'padding':'5px',
-                        'margin-top': '10px',
-                        'max-width': '70%',
-                        'border-radius': '20px',
-                        'font-size': '15px'                      
-                    }) 
-                    
-                    select.append("<option>Select One</option>")
-                    for(i=1;i<data["quick_replies"].length;i++){
-                        select.append("<option value="+data["quick_replies"][i].payload+">" + data["quick_replies"][i].title + "</option>")
-                    }
-                    
-
-                    $(select).change(function(){
-                        insertChat('me',this.value,{"text":this.value})
-                        //$(".mytext").val(this.value)
-                        //$(".mytext").trigger({type: 'keydown', which: 13, keyCode: 13});
-                        $(this).off('change')
-                    });
-
-                    div2.append(select)
-                }
-
-                if(data_type == "buttons"){
-                    button_group = $(document.createElement("div"))
-                    for(i=1;i<data["quick_replies"].length;i++){
-                        button = $(document.createElement("button")).css({
-                            "width":"40px",
-                            "min-height": "30px",
-                            "padding": "5px",
-                            "margin": "10px",
-                            "color": "white",
-                            "background": "#EA6625",
-                            "border" :"none",
-                            "border-radius":"20px"
-                        })
-                        button.val(data["quick_replies"][i].payload)
-                        button.html(data["quick_replies"][i].title)
-
-                        $(button).click(function(){
-                            insertChat('me',this.innerHTML,{"text":this.value})
-                            //$(".mytext").val(this.innerHTML)
-                            //$(".mytext").trigger({type: 'keydown', which: 13, keyCode: 13});
-                            $(this).off('click')
-                        })
-                        button_group.append(button)
-                    }  
-                    div2.append(button_group)                
-                }
-            }
             div2.append('<p><small>'+date+'</small></p>');
             control = div1
         }
@@ -155,16 +95,14 @@ $(document).ready(function(){
 
     function resetChat(){
         $("ul").empty();
-        insertChat("bot","Welcome to issue forum what are your queries ?",null)
-        
-        /*insertChat("me","call me Mayank",null)*/
+        //insertChat("other",{msg: "Welcome to issue forum what are your queries ?"})
     }
 
     $(".mytext").on("keydown", function(e){
         if (e.which == 13){
             var text = $(this).val();
             if (text !== ""){
-                insertChat("me", text,{"text":text});              
+                insertChat("me", {"msg":text});              
                 $(this).val('');
             }
         }
@@ -174,9 +112,9 @@ $(document).ready(function(){
         $(".mytext").trigger({type: 'keydown', which: 13, keyCode: 13});
     })
     resetChat();
-    socket.on('bot_uttered',function(data){
-		//console.log(data);
-		insertChat("bot",data.text,data)
+    socket.on('chatevent',function(data){
+    	console.log(data)
+		insertChat("other",data)
 	});  
 });
 

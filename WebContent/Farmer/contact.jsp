@@ -125,7 +125,7 @@
 
         <div class="col-lg-6">
           <div class="contact-maps mb-100">
-            <iframe src="chat.html"></iframe>
+            <iframe src="chat.jsp"></iframe>
           </div>
         </div>
       </div>

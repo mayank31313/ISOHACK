@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- GTranslate: https://gtranslate.io/ -->
+<style type="text/css">
+<!--
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+.goog-te-gadget-icon {background-image:url(//gtranslate.net/flags/gt_logo_19x19.gif) !important;background-position:0 0 !important;}
+body {top:0 !important;}
+-->
+</style>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay: false, includedLanguages: ''}, 'google_translate_element');}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="">

@@ -10,6 +10,9 @@
   <link rel="icon" href="img/core-img/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
 </head>
 
 <body>
@@ -18,6 +21,7 @@
   </div>
 
   <%@ include file = "header.jsp" %>
+  
   <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/bg-img/18.jpg');">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
